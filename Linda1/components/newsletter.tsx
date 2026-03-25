@@ -32,7 +32,7 @@ export function Newsletter() {
         </p>
 
         {isSubmitted ? (
-          <div className="bg-accent/20 rounded-full py-4 px-8 inline-block">
+          <div className="bg-accent/20 py-4 px-8 inline-block">
             <p className="text-accent font-medium">
               Thank you for subscribing! Check your inbox for a confirmation.
             </p>
@@ -45,11 +45,11 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 h-12 rounded-full px-6 bg-muted border-0 focus:ring-2 focus:ring-primary"
+              className="flex-1 h-12 px-6 bg-muted border-0 focus:ring-2 focus:ring-primary"
             />
             <Button 
               type="submit"
-              className="h-12 rounded-full px-8 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+              className="h-12 px-8 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
             >
               Subscribe
             </Button>

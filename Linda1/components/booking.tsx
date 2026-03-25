@@ -10,10 +10,10 @@ export function Booking() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
           {/* Image with decorative beige box */}
-          <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0">
+          <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
             {/* Decorative beige box - offset behind the image */}
             <div className="absolute -top-4 -left-4 w-full h-full bg-beige z-0" />
-            <div className="relative aspect-square w-full z-10">
+            <div className="relative aspect-square w-full z-10 min-h-[300px]">
               <Image
                 src="/images/book.jpg"
                 alt="Book a coaching session"
@@ -39,7 +39,7 @@ export function Booking() {
               <Link href="/contact">
                 <Button 
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
                 >
                   Book Now
                 </Button>

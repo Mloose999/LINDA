@@ -80,7 +80,7 @@ export function Header() {
           ))}
           <Button 
             size="sm"
-            className={`rounded-full px-6 transition-all ${
+            className={`px-6 transition-all ${
               isScrolled 
                 ? "bg-primary text-primary-foreground hover:bg-primary/90" 
                 : "bg-card text-foreground hover:bg-card/90"
@@ -116,7 +116,7 @@ export function Header() {
               </Link>
             ))}
             <Button 
-              className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
               onClick={() => {
                 router.push("/contact")
                 setIsMobileMenuOpen(false)

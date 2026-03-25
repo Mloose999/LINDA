@@ -175,7 +175,7 @@ export function Workshops() {
             </div>
             
             <Link href="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium">
                 Get Started
               </Button>
             </Link>
@@ -196,13 +196,13 @@ export function Workshops() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
-              <span key={i} className="text-sm text-foreground bg-accent/20 px-5 py-2 rounded-full">
+              <span key={i} className="text-sm text-foreground bg-accent/20 px-5 py-2">
                 {format}
               </span>
             ))}
           </div>
           <Link href="/contact">
-            <Button variant="outline" size="lg" className="rounded-full px-10 py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="lg" className="px-10 py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Contact for 1:1 Coaching
             </Button>
           </Link>

@@ -33,7 +33,7 @@ export function Hero() {
         <Button 
           size="lg"
           onClick={scrollToPhilosophy}
-          className="bg-card text-foreground hover:bg-card/90 rounded-full px-8 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
+          className="bg-card text-foreground hover:bg-card/90 px-8 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
         >
           Start Your Journey
         </Button>

@@ -40,7 +40,7 @@ export default function ContactPage() {
     return (
       <main className="min-h-screen bg-background flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
-          <div className="bg-accent/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+          <div className="bg-accent/20 w-20 h-20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-accent" />
           </div>
           <h1 className="font-serif text-3xl font-bold text-foreground mb-4">
@@ -50,7 +50,7 @@ export default function ContactPage() {
             Your message has been received. Linda will get back to you as soon as possible.
           </p>
           <Link href="/">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Button>
@@ -151,7 +151,7 @@ export default function ContactPage() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-full py-6 text-base font-medium transition-all duration-300 hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100"
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-base font-medium transition-all duration-300 hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100"
             >
               {isSubmitting ? (
                 <span className="flex items-center justify-center gap-2">
