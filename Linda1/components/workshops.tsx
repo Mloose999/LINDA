@@ -50,7 +50,7 @@ export function Workshops() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Transformation Journey</p>
+          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Transformation Journey</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
             Workshops & Programs
           </h2>
@@ -99,11 +99,11 @@ export function Workshops() {
           </div>
           <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
             {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-primary/20" />
+            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-accent/30" />
             
             {workshopStructure.map((item, index) => (
               <div key={index} className="relative text-center group">
-                <div className="relative z-10 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative z-10 w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   {item.step}
                 </div>
                 <h4 className="font-serif text-xl font-bold text-foreground mb-3">
@@ -126,7 +126,7 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
             </div>
-            <p className="text-primary font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+            <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
           </div>
           
           <div className="space-y-6">
@@ -136,17 +136,17 @@ export function Workshops() {
                 className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
               >
                 <div className="flex-shrink-0 pt-1">
-                  <workshop.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                  <workshop.icon className="w-7 h-7 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                     {workshop.title}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
                     {workshop.description}
                   </p>
                 </div>
-                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 mt-1" />
+                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300 mt-1" />
               </div>
             ))}
           </div>
@@ -154,8 +154,8 @@ export function Workshops() {
 
         {/* Complete Program Package - Highlighted Design */}
         <div className="mb-28 relative">
-          <div className="bg-card border-2 border-primary/20 rounded-3xl p-10 md:p-14 text-center">
-            <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
+          <div className="bg-card border-2 border-accent/30 rounded-3xl p-10 md:p-14 text-center">
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               Full Transformation Program
             </h3>
@@ -166,13 +166,13 @@ export function Workshops() {
             
             <div className="flex items-center justify-center gap-4 mb-10">
               <span className="text-muted-foreground/60 line-through text-xl">116 €</span>
-              <span className="font-serif text-5xl md:text-6xl font-bold text-primary">99 €</span>
+              <span className="font-serif text-5xl md:text-6xl font-bold text-accent">99 €</span>
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
               {["All 4 workshops", "Structured journey", "Save 17 €"].map((item, i) => (
                 <span key={i} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-primary" />
+                  <Check className="w-4 h-4 text-accent" />
                   {item}
                 </span>
               ))}
@@ -188,8 +188,8 @@ export function Workshops() {
 
         {/* 1:1 Coaching - Minimal Design */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
-            <Users className="w-8 h-8 text-primary" strokeWidth={1.5} />
+          <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-8">
+            <Users className="w-8 h-8 text-accent" strokeWidth={1.5} />
           </div>
           <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
             1:1 Coaching
@@ -200,7 +200,7 @@ export function Workshops() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-10">
             {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
-              <span key={i} className="text-sm text-foreground bg-primary/10 px-5 py-2 rounded-full">
+              <span key={i} className="text-sm text-foreground bg-accent/20 px-5 py-2 rounded-full">
                 {format}
               </span>
             ))}
