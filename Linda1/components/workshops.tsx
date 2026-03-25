@@ -83,31 +83,15 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Workshop Structure - With Image */}
+        {/* Workshop Structure */}
         <div className="mb-28">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16">
-            <div className="lg:w-1/2">
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                How Each Workshop Works
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
-              </p>
-            </div>
-            <div className="lg:w-1/2 relative">
-              {/* Decorative beige box - offset to right side */}
-              <div className="absolute -top-4 -right-6 w-full h-full bg-beige z-0" />
-              {/* Decorative beige circle - bottom left, small */}
-              <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-beige z-0" />
-              <div className="aspect-[4/3] w-full overflow-hidden relative z-10">
-                <Image
-                  src="/images/book.jpg"
-                  alt="Learning and self-reflection materials"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
+              How Each Workshop Works
+            </h3>
+            <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto">
+              Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
             {/* Connecting line for desktop */}
