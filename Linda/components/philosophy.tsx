@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Feather, Infinity } from "lucide-react"
 
 const philosophyItems = [
@@ -22,6 +23,22 @@ export function Philosophy() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
             The Foundation of Transformation
           </h2>
+        </div>
+
+        {/* Featured Image with Quote */}
+        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-[16/7]">
+          <Image
+            src="/images/hourglass.jpg"
+            alt="Transformation takes time - hourglass symbolizing the journey"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+            <p className="text-card font-serif text-xl md:text-2xl lg:text-3xl font-medium italic max-w-2xl">
+              &quot;True transformation is not about time, it&apos;s about intention and commitment to change.&quot;
+            </p>
+          </div>
         </div>
 
         <div className="space-y-20">

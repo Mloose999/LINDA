@@ -77,11 +77,26 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Workshop Structure - Horizontal Flow */}
+        {/* Workshop Structure - With Image */}
         <div className="mb-28">
-          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground text-center mb-16">
-            How Each Workshop Works
-          </h3>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16">
+            <div className="lg:w-1/2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
+                How Each Workshop Works
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
+              </p>
+            </div>
+            <div className="lg:w-1/2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+              <Image
+                src="/images/book.jpg"
+                alt="Learning and self-reflection materials"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
           <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
             {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-primary/20" />
