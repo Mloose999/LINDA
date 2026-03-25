@@ -26,12 +26,12 @@ export function Philosophy() {
         </div>
 
         {/* Featured Image with Quote */}
-        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-[16/7]">
+        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-[16/10]">
           <Image
             src="/images/hourglass.jpg"
             alt="Transformation takes time - hourglass symbolizing the journey"
             fill
-            className="object-cover"
+            className="object-contain bg-[#1a1a1a]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
