@@ -126,7 +126,7 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
             </div>
-            <p className="text-primary font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+            <p className="text-gold-dark font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
           </div>
           
           <div className="space-y-6">
@@ -166,7 +166,7 @@ export function Workshops() {
             
             <div className="flex items-center justify-center gap-4 mb-10">
               <span className="text-primary-foreground/50 line-through text-xl">116 €</span>
-              <span className="font-serif text-5xl md:text-6xl font-bold text-primary-foreground">99 €</span>
+              <span className="font-serif text-5xl md:text-6xl font-bold text-gold">99 €</span>
             </div>
             
             <div className="flex flex-wrap justify-center gap-6 mb-12 text-primary-foreground/70">

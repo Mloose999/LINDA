@@ -19,7 +19,7 @@ export function Philosophy() {
     <section id="philosophy" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+          <p className="text-gold-dark font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
             The Foundation of Transformation
           </h2>
