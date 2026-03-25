@@ -36,7 +36,7 @@ export function Footer() {
               alt="Change Your Life with Linda"
               width={140}
               height={140}
-              className="mix-blend-screen"
+              className="object-contain"
             />
             <div>
               <p className="font-serif text-2xl font-extrabold mb-1 text-primary">Linda Holtkamp - Mindset Coaching</p>

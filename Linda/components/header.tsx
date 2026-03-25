@@ -52,7 +52,7 @@ export function Header() {
             alt="Change Your Life with Linda"
             width={80}
             height={80}
-            className="mix-blend-lighten"
+            className="object-contain"
           />
           <span className={`font-serif text-lg font-bold transition-colors hidden sm:block ${
             isScrolled ? "text-foreground" : "text-card"
