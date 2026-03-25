@@ -20,7 +20,7 @@ export function Newsletter() {
   return (
     <section id="newsletter" className="py-24 md:py-32 bg-background">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <Mail className="w-14 h-14 text-primary mx-auto mb-8" strokeWidth={1.5} />
+        <Mail className="w-14 h-14 text-accent mx-auto mb-8" strokeWidth={1.5} />
         
         <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-4">
           Stay Connected
@@ -32,8 +32,8 @@ export function Newsletter() {
         </p>
 
         {isSubmitted ? (
-          <div className="bg-primary/10 rounded-full py-4 px-8 inline-block">
-            <p className="text-primary font-medium">
+          <div className="bg-accent/20 rounded-full py-4 px-8 inline-block">
+            <p className="text-accent font-medium">
               Thank you for subscribing! Check your inbox for a confirmation.
             </p>
           </div>

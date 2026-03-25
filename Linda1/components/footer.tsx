@@ -39,7 +39,7 @@ export function Footer() {
               className="object-contain"
             />
             <div>
-              <p className="font-serif text-2xl font-extrabold mb-1 text-primary">Linda Holtkamp - Mindset Coaching</p>
+              <p className="font-serif text-2xl font-extrabold mb-1 text-accent">Linda Holtkamp - Mindset Coaching</p>
               <p className="text-secondary-foreground/70 text-sm">It starts with you</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ export function Footer() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-secondary-foreground/80 hover:text-primary transition-colors duration-200 text-sm"
+                className="text-secondary-foreground/80 hover:text-accent transition-colors duration-200 text-sm"
               >
                 {link.name}
               </Link>
@@ -64,10 +64,10 @@ export function Footer() {
               <Link
                 key={social.name}
                 href={social.href}
-                className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors duration-200"
+                className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center hover:bg-accent/30 transition-colors duration-200"
                 aria-label={social.name}
               >
-                <social.icon className="w-5 h-5 text-primary" />
+                <social.icon className="w-5 h-5 text-accent" />
               </Link>
             ))}
           </div>
@@ -76,17 +76,17 @@ export function Footer() {
         {/* Impressum */}
         <div className="mt-12 pt-8 border-t border-secondary-foreground/10">
           <div className="text-center mb-6">
-            <h3 className="font-serif text-lg font-semibold text-primary mb-4">Impressum</h3>
+            <h3 className="font-serif text-lg font-semibold text-accent mb-4">Impressum</h3>
             <div className="text-secondary-foreground/70 text-sm space-y-1">
               <p className="font-medium text-secondary-foreground">Linda Holtkamp</p>
               <p>Reemstückenkamp 22 c, 22523 Hamburg</p>
               <p>
-                <a href="tel:+491715812251" className="hover:text-primary transition-colors">
+                <a href="tel:+491715812251" className="hover:text-accent transition-colors">
                   +49 171 5812251
                 </a>
               </p>
               <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-primary transition-colors">
+                <a href="mailto:info@lindaholtkamp.com" className="hover:text-accent transition-colors">
                   info@lindaholtkamp.com
                 </a>
               </p>

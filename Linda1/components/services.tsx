@@ -28,7 +28,7 @@ export function Services() {
     <section id="services" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">What I Offer</p>
+          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">What I Offer</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground">
             Services
           </h2>
@@ -40,7 +40,7 @@ export function Services() {
               key={index}
               className="flex items-start gap-6 group"
             >
-              <service.icon className="flex-shrink-0 w-12 h-12 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+              <service.icon className="flex-shrink-0 w-12 h-12 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
               <div className="pt-1">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
                   {service.title}

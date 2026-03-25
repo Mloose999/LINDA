@@ -40,8 +40,8 @@ export default function ContactPage() {
     return (
       <main className="min-h-screen bg-background flex items-center justify-center px-6">
         <div className="max-w-md w-full text-center">
-          <div className="bg-primary/10 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-10 h-10 text-primary" />
+          <div className="bg-accent/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-10 h-10 text-accent" />
           </div>
           <h1 className="font-serif text-3xl font-bold text-foreground mb-4">
             Thank You!

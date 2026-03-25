@@ -20,11 +20,11 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-primary font-semibold text-lg md:text-xl tracking-widest uppercase mb-4">Change Your Life with Linda</p>
+        <p className="text-accent font-semibold text-lg md:text-xl tracking-widest uppercase mb-4">Change Your Life with Linda</p>
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-extrabold text-card leading-tight text-balance mb-6">
           Giving up is not an option
         </h1>
-        <p className="text-primary/90 italic text-lg mb-8">It starts with you</p>
+        <p className="text-accent/90 italic text-lg mb-8">It starts with you</p>
         <p className="text-card/90 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10 text-pretty">
           Mental strength is the foundation of a fulfilled life. Your thoughts shape your reality, 
           and when you learn to master your mind, you unlock the power to overcome challenges, 

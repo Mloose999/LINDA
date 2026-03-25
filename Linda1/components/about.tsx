@@ -5,7 +5,7 @@ export function About() {
     <section id="about" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">My Story</p>
+          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">My Story</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground">
             About Me
           </h2>
@@ -30,7 +30,7 @@ export function About() {
               I found myself alone, left only with myself and a quiet inner knowing that there had to be more to 
               life than what I had been living.
             </p>
-            <p className="font-serif text-xl text-primary font-medium">
+            <p className="font-serif text-xl text-accent font-medium">
               Giving up was never an option.
             </p>
             <p>

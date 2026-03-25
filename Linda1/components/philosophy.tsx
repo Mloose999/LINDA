@@ -19,7 +19,7 @@ export function Philosophy() {
     <section id="philosophy" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
-          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
+          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground text-balance">
             The Foundation of Transformation
           </h2>
@@ -50,7 +50,7 @@ export function Philosophy() {
               }`}
             >
               <div className="flex-shrink-0">
-                <item.icon className="w-16 h-16 text-primary" strokeWidth={1.5} />
+                <item.icon className="w-16 h-16 text-accent" strokeWidth={1.5} />
               </div>
               <div className={`text-center ${index % 2 === 0 ? "md:text-left" : "md:text-right"}`}>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">

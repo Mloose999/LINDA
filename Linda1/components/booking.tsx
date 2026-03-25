@@ -8,7 +8,7 @@ export function Booking() {
   return (
     <section id="booking" className="py-24 md:py-32 bg-background">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <Calendar className="w-16 h-16 text-primary mx-auto mb-8" strokeWidth={1.5} />
+        <Calendar className="w-16 h-16 text-accent mx-auto mb-8" strokeWidth={1.5} />
         
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6">
           Book a Session
