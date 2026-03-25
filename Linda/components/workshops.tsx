@@ -120,8 +120,8 @@ export function Workshops() {
                 key={index} 
                 className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
               >
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <workshop.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
+                <div className="flex-shrink-0 pt-1">
+                  <workshop.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
                   <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
