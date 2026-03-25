@@ -13,7 +13,7 @@ export function Booking() {
           <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
             {/* Decorative beige box - offset behind the image */}
             <div className="absolute -top-4 -left-4 w-full h-full bg-beige z-0" />
-            <div className="relative aspect-square w-full z-10 min-h-[300px]">
+            <div className="relative z-10 w-full h-[300px] sm:h-[350px] md:h-[400px]">
               <Image
                 src="/images/book.jpg"
                 alt="Book a coaching session"
