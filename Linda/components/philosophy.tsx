@@ -26,16 +26,16 @@ export function Philosophy() {
         </div>
 
         {/* Featured Image with Quote */}
-        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-[16/10]">
+        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-square md:aspect-[4/3]">
           <Image
             src="/images/hourglass.jpg"
             alt="Transformation takes time - hourglass symbolizing the journey"
             fill
-            className="object-contain bg-[#1a1a1a]"
+            className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-            <p className="text-card font-serif text-xl md:text-2xl lg:text-3xl font-medium italic max-w-2xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+            <p className="text-card font-serif text-lg md:text-xl lg:text-2xl font-medium italic max-w-xl">
               &quot;True transformation is not about time, it&apos;s about intention and commitment to change.&quot;
             </p>
           </div>
