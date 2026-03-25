@@ -46,7 +46,7 @@ const workshopStructure = [
 
 export function Workshops() {
   return (
-    <section id="workshops" className="py-24 md:py-32 bg-beige">
+    <section id="workshops" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -60,19 +60,24 @@ export function Workshops() {
         </div>
 
         {/* Hero Image with Overlay Text */}
-        <div className="relative rounded-3xl overflow-hidden mb-24 aspect-[21/9]">
-          <Image
-            src="/images/workshop.jpg"
-            alt="Personal transformation workshop"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="px-8 md:px-12 max-w-xl">
-              <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                Your journey to transformation starts here
-              </p>
+        <div className="relative mb-24">
+          {/* Decorative beige elements */}
+          <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-beige z-0" />
+          <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-beige z-0" />
+          <div className="relative rounded-3xl overflow-hidden aspect-[21/9] z-10">
+            <Image
+              src="/images/workshop.jpg"
+              alt="Personal transformation workshop"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
+            <div className="absolute inset-0 flex items-center">
+              <div className="px-8 md:px-12 max-w-xl">
+                <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                  Your journey to transformation starts here
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -88,13 +93,17 @@ export function Workshops() {
                 Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
               </p>
             </div>
-            <div className="lg:w-1/2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
-              <Image
-                src="/images/book.jpg"
-                alt="Learning and self-reflection materials"
-                fill
-                className="object-cover"
-              />
+            <div className="lg:w-1/2 relative">
+              {/* Decorative beige element */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-beige z-0" />
+              <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden relative z-10">
+                <Image
+                  src="/images/book.jpg"
+                  alt="Learning and self-reflection materials"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">

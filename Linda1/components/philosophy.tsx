@@ -16,7 +16,7 @@ const philosophyItems = [
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="py-24 md:py-32 bg-beige">
+    <section id="philosophy" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
@@ -26,18 +26,23 @@ export function Philosophy() {
         </div>
 
         {/* Featured Image with Quote */}
-        <div className="relative rounded-3xl overflow-hidden mb-20 aspect-square md:aspect-[4/3]">
-          <Image
-            src="/images/hourglass.jpg"
-            alt="Transformation takes time - hourglass symbolizing the journey"
-            fill
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-            <p className="text-card font-serif text-lg md:text-xl lg:text-2xl font-medium italic max-w-xl">
-              &quot;True transformation is not about time, it&apos;s about intention and commitment to change.&quot;
-            </p>
+        <div className="relative mb-20">
+          {/* Decorative beige elements */}
+          <div className="absolute -top-8 -left-8 w-40 h-40 rounded-full bg-beige z-0" />
+          <div className="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-beige z-0" />
+          <div className="relative rounded-3xl overflow-hidden aspect-square md:aspect-[4/3] z-10">
+            <Image
+              src="/images/hourglass.jpg"
+              alt="Transformation takes time - hourglass symbolizing the journey"
+              fill
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+              <p className="text-card font-serif text-lg md:text-xl lg:text-2xl font-medium italic max-w-xl">
+                &quot;True transformation is not about time, it&apos;s about intention and commitment to change.&quot;
+              </p>
+            </div>
           </div>
         </div>
 

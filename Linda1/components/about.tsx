@@ -12,14 +12,20 @@ export function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Image */}
-          <div className="aspect-[4/5] rounded-3xl overflow-hidden w-full relative">
-            <Image
-              src="/images/coach.jpg"
-              alt="Linda Holtkamp - Mindset Coach"
-              fill
-              className="object-cover"
-            />
+          {/* Image with decorative elements */}
+          <div className="relative">
+            {/* Decorative beige circle - top right */}
+            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-beige z-0" />
+            {/* Decorative beige circle - bottom left */}
+            <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-beige z-0" />
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden w-full relative z-10">
+              <Image
+                src="/images/coach.jpg"
+                alt="Linda Holtkamp - Mindset Coach"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Text Content */}
