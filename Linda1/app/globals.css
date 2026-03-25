@@ -17,8 +17,8 @@
   --popover-foreground: oklch(0.25 0.03 160);
   
   /* Beige Töne - warm und einladend */
-  --beige: oklch(0.78 0.045 75);
-  --beige-light: oklch(0.92 0.025 75);
+  --beige: oklch(0.55 0.08 65);
+  --beige-light: oklch(0.80 0.04 70);
   
   /* Smaragdgrün - satt und elegant */
   --primary: oklch(0.42 0.12 160);
