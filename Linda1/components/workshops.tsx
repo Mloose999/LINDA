@@ -1,0 +1,217 @@
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Brain, Flame, Sparkles, Heart, Users, Check, ArrowRight } from "lucide-react"
+
+const workshops = [
+  {
+    icon: Brain,
+    title: "Understanding Yourself & Regulating Your Nervous System",
+    description: "Learn to understand your inner world and develop tools to regulate your nervous system for greater calm and clarity."
+  },
+  {
+    icon: Flame,
+    title: "Transforming Fears & Limiting Beliefs",
+    description: "Identify and release the fears and beliefs that have been holding you back from living your fullest life."
+  },
+  {
+    icon: Sparkles,
+    title: "Creating a New Life from a New Energy",
+    description: "Step into a new vibration and learn to create your reality from a place of empowerment and possibility."
+  },
+  {
+    icon: Heart,
+    title: "From Insecurity to a Healthy Relationship",
+    description: "Build confidence and learn the foundations of creating and maintaining healthy, fulfilling relationships."
+  }
+]
+
+const workshopStructure = [
+  {
+    step: "01",
+    title: "Introduction & Self-Reflection",
+    description: "Each topic begins with a clear explanation and a self-assessment to help you understand where you currently stand."
+  },
+  {
+    step: "02",
+    title: "Content & Practical Exercises",
+    description: "You will receive reading material, tools, and exercises for each topic, along with practical ways to apply what you learn."
+  },
+  {
+    step: "03",
+    title: "Integration & Application",
+    description: "Follow-up exercises and self-tests help you integrate the lessons into your everyday routines and see real progress."
+  }
+]
+
+export function Workshops() {
+  return (
+    <section id="workshops" className="py-24 md:py-32 bg-background">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Transformation Journey</p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
+            Workshops & Programs
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+            All workshops can be booked individually, so you can start exactly where you feel you need the most support.
+          </p>
+        </div>
+
+        {/* Hero Image with Overlay Text */}
+        <div className="relative rounded-3xl overflow-hidden mb-24 aspect-[21/9]">
+          <Image
+            src="/images/workshop.jpg"
+            alt="Personal transformation workshop"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="px-8 md:px-12 max-w-xl">
+              <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                Your journey to transformation starts here
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Workshop Structure - With Image */}
+        <div className="mb-28">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-16">
+            <div className="lg:w-1/2">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
+                How Each Workshop Works
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
+              </p>
+            </div>
+            <div className="lg:w-1/2 relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
+              <Image
+                src="/images/book.jpg"
+                alt="Learning and self-reflection materials"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-primary/20" />
+            
+            {workshopStructure.map((item, index) => (
+              <div key={index} className="relative text-center group">
+                <div className="relative z-10 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {item.step}
+                </div>
+                <h4 className="font-serif text-xl font-bold text-foreground mb-3">
+                  {item.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Individual Workshops - Clean List Style */}
+        <div className="mb-28">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
+            <div>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+                Individual Workshops
+              </h3>
+              <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
+            </div>
+            <p className="text-primary font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+          </div>
+          
+          <div className="space-y-6">
+            {workshops.map((workshop, index) => (
+              <div 
+                key={index} 
+                className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
+              >
+                <div className="flex-shrink-0 pt-1">
+                  <workshop.icon className="w-7 h-7 text-primary group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {workshop.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {workshop.description}
+                  </p>
+                </div>
+                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 mt-1" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Complete Program Package - Highlighted Design */}
+        <div className="mb-28 relative">
+          <div className="bg-primary rounded-3xl p-10 md:p-14 text-center">
+            <p className="text-primary-foreground/70 font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
+            <h3 className="font-serif text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
+              Full Transformation Program
+            </h3>
+            <p className="text-primary-foreground/80 leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
+              Experience the complete transformation process with all four workshops combined. 
+              A structured, step-by-step journey from inner healing to building confident, healthy relationships.
+            </p>
+            
+            <div className="flex items-center justify-center gap-4 mb-10">
+              <span className="text-primary-foreground/50 line-through text-xl">116 €</span>
+              <span className="font-serif text-5xl md:text-6xl font-bold text-primary-foreground">99 €</span>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-6 mb-12 text-primary-foreground/70">
+              {["All 4 workshops", "Structured journey", "Save 17 €"].map((item, i) => (
+                <span key={i} className="flex items-center gap-2">
+                  <Check className="w-4 h-4" />
+                  {item}
+                </span>
+              ))}
+            </div>
+            
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-full px-10 py-6 text-base font-medium">
+                Get Started
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* 1:1 Coaching - Minimal Design */}
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
+            <Users className="w-8 h-8 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
+            1:1 Coaching
+          </h3>
+          <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+            For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
+            Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
+              <span key={i} className="text-sm text-foreground bg-primary/10 px-5 py-2 rounded-full">
+                {format}
+              </span>
+            ))}
+          </div>
+          <Link href="/contact">
+            <Button variant="outline" size="lg" className="rounded-full px-10 py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              Contact for 1:1 Coaching
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
