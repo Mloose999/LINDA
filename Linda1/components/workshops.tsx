@@ -174,11 +174,7 @@ export function Workshops() {
               ))}
             </div>
             
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium">
-                Get Started
-              </Button>
-            </Link>
+            
           </div>
         </div>
 
@@ -201,11 +197,7 @@ export function Workshops() {
               </span>
             ))}
           </div>
-          <Link href="/contact">
-            <Button variant="outline" size="lg" className="px-10 py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Contact for 1:1 Coaching
-            </Button>
-          </Link>
+          
         </div>
       </div>
     </section>
