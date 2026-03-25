@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
+  { name: "Philosophy", href: "#philosophy" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Workshops", href: "#workshops" },
@@ -49,30 +50,36 @@ export function Header() {
           href="/" 
           className="flex items-center gap-3"
         >
-          <span className={`font-serif text-xl font-medium italic transition-colors ${
+          <span className={`font-serif text-xl font-bold transition-colors ${
             isScrolled ? "text-foreground" : "text-foreground"
           }`}>
-            logo
+            Linda Holtkamp
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
             >
               {link.name}
             </Link>
           ))}
+          <Button 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            onClick={() => router.push("/contact")}
+          >
+            Book Now
+          </Button>
         </nav>
 
-        {/* Menu Button */}
+        {/* Mobile Menu Button */}
         <button
-          className="p-2 text-foreground"
+          className="md:hidden p-2 text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -82,7 +89,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
           <nav className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <Link
@@ -95,8 +102,7 @@ export function Header() {
               </Link>
             ))}
             <Button 
-              variant="outline"
-              className="border-foreground text-foreground hover:bg-foreground hover:text-background mt-2"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground mt-2"
               onClick={() => {
                 router.push("/contact")
                 setIsMobileMenuOpen(false)

@@ -18,24 +18,24 @@ export function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="py-24 md:py-32 bg-beige">
+    <section id="newsletter" className="py-24 md:py-32 bg-primary/5">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <div className="w-16 h-16 bg-card flex items-center justify-center mx-auto mb-8">
-          <Mail className="w-8 h-8 text-foreground" strokeWidth={1.5} />
+        <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <Mail className="w-8 h-8 text-primary" />
         </div>
         
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
           Stay Connected
         </h2>
         
-        <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+        <p className="text-muted-foreground text-lg leading-relaxed mb-8">
           Join the newsletter and receive insights, inspiration, and tools to strengthen your mindset 
           and elevate your life.
         </p>
 
         {isSubmitted ? (
-          <div className="bg-card py-4 px-8 inline-block">
-            <p className="text-foreground font-medium">
+          <div className="bg-primary/10 rounded-xl p-6">
+            <p className="text-primary font-medium">
               Thank you for subscribing! Check your inbox for a confirmation.
             </p>
           </div>
@@ -47,12 +47,11 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 h-12 px-6 bg-card border-0 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-foreground"
+              className="flex-1 h-12 px-6 bg-background border-border"
             />
             <Button 
               type="submit"
-              variant="outline"
-              className="h-12 px-8 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+              className="h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               Subscribe
             </Button>

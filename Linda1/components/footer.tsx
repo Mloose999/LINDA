@@ -4,8 +4,10 @@ import Link from "next/link"
 import { Instagram, Linkedin, Youtube } from "lucide-react"
 
 const navLinks = [
+  { name: "Philosophy", href: "#philosophy" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
+  { name: "Workshops", href: "#workshops" },
   { name: "Booking", href: "#booking" },
 ]
 
@@ -25,65 +27,66 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-secondary text-secondary-foreground py-16">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
-          <div className="text-center md:text-left">
-            <p className="font-serif text-2xl font-bold mb-1">Linda Holtkamp</p>
-            <p className="text-background/60 text-sm tracking-widest uppercase">Mindset Coaching</p>
+          <div>
+            <p className="font-serif text-2xl font-bold mb-4">Linda Holtkamp</p>
+            <p className="text-secondary-foreground/70 leading-relaxed">
+              Life & Mindset Coaching for transformation, healing, and personal growth.
+            </p>
           </div>
 
           {/* Navigation */}
-          <nav className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-background/70 hover:text-background transition-colors duration-200 text-sm"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </nav>
+          <div>
+            <p className="font-medium mb-4">Quick Links</p>
+            <nav className="flex flex-col gap-3">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => scrollToSection(e, link.href)}
+                  className="text-secondary-foreground/70 hover:text-secondary-foreground transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.name}
-                href={social.href}
-                className="w-10 h-10 border border-background/30 flex items-center justify-center hover:bg-background hover:text-foreground transition-colors duration-200"
-                aria-label={social.name}
-              >
-                <social.icon className="w-5 h-5" />
-              </Link>
-            ))}
+          {/* Contact & Social */}
+          <div>
+            <p className="font-medium mb-4">Connect</p>
+            <div className="flex gap-4 mb-6">
+              {socialLinks.map((social) => (
+                <Link
+                  key={social.name}
+                  href={social.href}
+                  className="w-10 h-10 bg-secondary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </Link>
+              ))}
+            </div>
+            <div className="text-secondary-foreground/70 text-sm space-y-1">
+              <p>info@lindaholtkamp.com</p>
+              <p>+49 171 5812251</p>
+            </div>
           </div>
         </div>
 
         {/* Impressum */}
-        <div className="pt-8 border-t border-background/20">
-          <div className="text-center mb-8">
-            <h3 className="font-serif text-lg font-semibold mb-4">Impressum</h3>
-            <div className="text-background/60 text-sm space-y-1">
-              <p className="font-medium text-background">Linda Holtkamp</p>
-              <p>Reemstückenkamp 22 c, 22523 Hamburg</p>
-              <p>
-                <a href="tel:+491715812251" className="hover:text-background transition-colors">
-                  +49 171 5812251
-                </a>
-              </p>
-              <p>
-                <a href="mailto:info@lindaholtkamp.com" className="hover:text-background transition-colors">
-                  info@lindaholtkamp.com
-                </a>
-              </p>
+        <div className="pt-8 border-t border-secondary-foreground/20">
+          <div className="text-center mb-6">
+            <p className="font-medium mb-2">Impressum</p>
+            <div className="text-secondary-foreground/60 text-sm">
+              <p>Linda Holtkamp | Reemstückenkamp 22 c, 22523 Hamburg</p>
             </div>
           </div>
           
-          <p className="text-background/40 text-sm text-center">
+          <p className="text-secondary-foreground/40 text-sm text-center">
             © {new Date().getFullYear()} Linda Holtkamp - Mindset Coaching. All rights reserved.
           </p>
         </div>
