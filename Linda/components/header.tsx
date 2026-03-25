@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -15,6 +16,7 @@ const navLinks = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +84,7 @@ export function Header() {
                 ? "bg-primary text-primary-foreground hover:bg-primary/90" 
                 : "bg-card text-foreground hover:bg-card/90"
             }`}
-            onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => router.push("/contact")}
           >
             Book Now
           </Button>
@@ -115,7 +117,7 @@ export function Header() {
             <Button 
               className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
               onClick={() => {
-                document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })
+                router.push("/contact")
                 setIsMobileMenuOpen(false)
               }}
             >

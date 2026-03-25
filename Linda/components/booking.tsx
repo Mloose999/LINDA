@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
 
@@ -18,15 +19,17 @@ export function Booking() {
           toward a life of clarity, strength, and purpose.
         </p>
         
-        <Button 
-          size="lg"
-          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
-        >
-          Book Now
-        </Button>
+        <Link href="/contact">
+          <Button 
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
+          >
+            Book Now
+          </Button>
+        </Link>
 
         <p className="mt-12 text-muted-foreground text-sm">
-          Calendar integration coming soon. For now, click the button above to get in touch.
+          Fill out the contact form and Linda will get back to you to schedule your session.
         </p>
       </div>
     </section>
