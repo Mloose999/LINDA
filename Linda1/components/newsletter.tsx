@@ -18,7 +18,7 @@ export function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="py-24 md:py-32 bg-background">
+    <section id="newsletter" className="py-24 md:py-32 bg-beige">
       <div className="max-w-2xl mx-auto px-6 text-center">
         <Mail className="w-14 h-14 text-accent mx-auto mb-8" strokeWidth={1.5} />
         

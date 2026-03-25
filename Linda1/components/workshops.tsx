@@ -46,7 +46,7 @@ const workshopStructure = [
 
 export function Workshops() {
   return (
-    <section id="workshops" className="py-24 md:py-32 bg-background">
+    <section id="workshops" className="py-24 md:py-32 bg-beige">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">

@@ -16,7 +16,7 @@ const philosophyItems = [
 
 export function Philosophy() {
   return (
-    <section id="philosophy" className="py-24 md:py-32 bg-background">
+    <section id="philosophy" className="py-24 md:py-32 bg-beige">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-20">
           <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Philosophy</p>
