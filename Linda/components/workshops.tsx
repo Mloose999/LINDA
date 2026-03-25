@@ -1,8 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Brain, Flame, Sparkles, Heart, Users, Check } from "lucide-react"
+import { Brain, Flame, Sparkles, Heart, Users, Check, ArrowRight } from "lucide-react"
 
 const workshops = [
   {
@@ -29,28 +28,28 @@ const workshops = [
 
 const workshopStructure = [
   {
-    step: "1",
+    step: "01",
     title: "Introduction & Self-Reflection",
     description: "Each topic begins with a clear explanation and a self-assessment to help you understand where you currently stand."
   },
   {
-    step: "2",
+    step: "02",
     title: "Content & Practical Exercises",
-    description: "You will receive reading material, tools, and exercises for each topic, along with practical ways to apply what you learn in your daily life."
+    description: "You will receive reading material, tools, and exercises for each topic, along with practical ways to apply what you learn."
   },
   {
-    step: "3",
+    step: "03",
     title: "Integration & Application",
-    description: "Follow-up exercises and additional self-tests help you integrate the lessons into your everyday routines and see real progress."
+    description: "Follow-up exercises and self-tests help you integrate the lessons into your everyday routines and see real progress."
   }
 ]
 
 export function Workshops() {
   return (
-    <section id="workshops" className="py-24 md:py-32 bg-card">
+    <section id="workshops" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Transformation Journey</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
             Workshops & Programs
@@ -60,37 +59,42 @@ export function Workshops() {
           </p>
         </div>
 
-        {/* Hero Image */}
-        <div className="relative rounded-2xl overflow-hidden mb-20 aspect-[21/9]">
+        {/* Hero Image with Overlay Text */}
+        <div className="relative rounded-3xl overflow-hidden mb-24 aspect-[21/9]">
           <Image
             src="/images/workshop.jpg"
             alt="Personal transformation workshop"
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8">
-            <p className="text-foreground font-serif text-2xl md:text-3xl font-bold text-balance">
-              Your journey to transformation starts here
-            </p>
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="px-8 md:px-12 max-w-xl">
+              <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                Your journey to transformation starts here
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Workshop Structure */}
-        <div className="mb-20">
-          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
+        {/* Workshop Structure - Horizontal Flow */}
+        <div className="mb-28">
+          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground text-center mb-16">
             How Each Workshop Works
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-primary/20" />
+            
             {workshopStructure.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg mx-auto mb-4">
+              <div key={index} className="relative text-center group">
+                <div className="relative z-10 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   {item.step}
                 </div>
-                <h4 className="font-serif text-lg font-bold text-foreground mb-3">
+                <h4 className="font-serif text-xl font-bold text-foreground mb-3">
                   {item.title}
                 </h4>
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -98,94 +102,101 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Individual Workshops */}
-        <div className="mb-20">
-          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground text-center mb-4">
-            Individual Workshops
-          </h3>
-          <p className="text-center text-primary font-semibold mb-12">29 € per workshop</p>
+        {/* Individual Workshops - Clean List Style */}
+        <div className="mb-28">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
+            <div>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground">
+                Individual Workshops
+              </h3>
+              <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
+            </div>
+            <p className="text-primary font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-6">
             {workshops.map((workshop, index) => (
-              <Card key={index} className="p-6 bg-background border-border hover:border-primary/50 transition-colors duration-300">
-                <div className="flex items-start gap-4">
-                  <workshop.icon className="flex-shrink-0 w-10 h-10 text-primary" strokeWidth={1.5} />
-                  <div>
-                    <h4 className="font-serif text-lg font-bold text-foreground mb-2">
-                      {workshop.title}
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      {workshop.description}
-                    </p>
-                  </div>
+              <div 
+                key={index} 
+                className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
+              >
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <workshop.icon className="w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
-              </Card>
+                <div className="flex-1">
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                    {workshop.title}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {workshop.description}
+                  </p>
+                </div>
+                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 mt-1" />
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Complete Program Package */}
-        <div className="mb-20">
-          <Card className="p-8 md:p-12 bg-primary/5 border-primary/20">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+        {/* Complete Program Package - Elegant Design */}
+        <div className="mb-28 relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 rounded-3xl" />
+          <div className="relative p-8 md:p-14">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
               <div className="flex-1">
-                <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-4">
-                  Special Package
-                </div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  Complete Transformation Program
+                <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-4">
+                  Complete Package
+                </span>
+                <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+                  Full Transformation Program
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Experience the full transformation process with all four workshops combined. 
-                  This structured, step-by-step journey supports you from inner healing all the way 
-                  to building confident and healthy relationships.
+                <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+                  Experience the complete transformation process with all four workshops combined. 
+                  A structured, step-by-step journey from inner healing to building confident, healthy relationships.
                 </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2 text-foreground">
-                    <Check className="w-5 h-5 text-primary" />
-                    <span>All 4 workshops included</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-foreground">
-                    <Check className="w-5 h-5 text-primary" />
-                    <span>Structured transformation journey</span>
-                  </li>
-                  <li className="flex items-center gap-2 text-foreground">
-                    <Check className="w-5 h-5 text-primary" />
-                    <span>Deep, sustainable change</span>
-                  </li>
-                </ul>
+                <div className="flex flex-wrap gap-x-8 gap-y-3">
+                  {["All 4 workshops", "Structured journey", "Sustainable change"].map((item, i) => (
+                    <span key={i} className="flex items-center gap-2 text-foreground">
+                      <Check className="w-5 h-5 text-primary" />
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="text-center md:text-right">
-                <p className="text-muted-foreground line-through text-lg">116 €</p>
-                <p className="font-serif text-4xl md:text-5xl font-bold text-primary mb-2">99 €</p>
-                <p className="text-muted-foreground text-sm mb-6">Save 17 € with the package</p>
+              <div className="text-center lg:text-right">
+                <p className="text-muted-foreground line-through text-lg mb-1">116 €</p>
+                <p className="font-serif text-5xl md:text-6xl font-bold text-primary mb-1">99 €</p>
+                <p className="text-muted-foreground mb-8">Save 17 €</p>
                 <Link href="/contact">
-                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium">
                     Get Started
                   </Button>
                 </Link>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
 
-        {/* 1:1 Coaching */}
-        <div className="text-center">
-          <Users className="w-12 h-12 text-primary mx-auto mb-6" strokeWidth={1.5} />
+        {/* 1:1 Coaching - Minimal Design */}
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8">
+            <Users className="w-8 h-8 text-primary" strokeWidth={1.5} />
+          </div>
           <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
             1:1 Coaching
           </h3>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
+          <p className="text-muted-foreground leading-relaxed text-lg mb-8">
             For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
             Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <span className="bg-background border border-border px-4 py-2 rounded-full text-sm text-foreground">Live Sessions</span>
-            <span className="bg-background border border-border px-4 py-2 rounded-full text-sm text-foreground">Email Coaching</span>
-            <span className="bg-background border border-border px-4 py-2 rounded-full text-sm text-foreground">Phone / WhatsApp</span>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
+              <span key={i} className="text-sm text-foreground bg-primary/10 px-5 py-2 rounded-full">
+                {format}
+              </span>
+            ))}
           </div>
           <Link href="/contact">
-            <Button variant="outline" className="rounded-full px-8 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" size="lg" className="rounded-full px-10 py-6 text-base border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Contact for 1:1 Coaching
             </Button>
           </Link>
