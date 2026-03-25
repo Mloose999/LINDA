@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
-import { Nunito, Quicksand } from 'next/font/google'
+import { Lato, Cormorant_Garamond } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const nunito = Nunito({ 
+const lato = Lato({ 
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "700", "900"],
   variable: "--font-sans"
 });
 
-const quicksand = Quicksand({ 
+const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-serif"
@@ -45,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${quicksand.variable} font-sans antialiased`}>
+      <body className={`${lato.variable} ${cormorant.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
