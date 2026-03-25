@@ -137,43 +137,36 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Complete Program Package - Elegant Design */}
-        <div className="mb-28 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5 rounded-3xl" />
-          <div className="relative p-8 md:p-14">
-            <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-              <div className="flex-1">
-                <span className="inline-block text-primary text-sm font-semibold tracking-wider uppercase mb-4">
-                  Complete Package
-                </span>
-                <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                  Full Transformation Program
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-                  Experience the complete transformation process with all four workshops combined. 
-                  A structured, step-by-step journey from inner healing to building confident, healthy relationships.
-                </p>
-                <div className="flex flex-wrap gap-x-8 gap-y-3">
-                  {["All 4 workshops", "Structured journey", "Sustainable change"].map((item, i) => (
-                    <span key={i} className="flex items-center gap-2 text-foreground">
-                      <Check className="w-5 h-5 text-primary" />
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="text-center lg:text-right">
-                <p className="text-muted-foreground line-through text-lg mb-1">116 €</p>
-                <p className="font-serif text-5xl md:text-6xl font-bold text-primary mb-1">99 €</p>
-                <p className="text-muted-foreground mb-8">Save 17 €</p>
-                <Link href="/contact">
-                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium">
-                    Get Started
-                  </Button>
-                </Link>
-              </div>
-            </div>
+        {/* Complete Program Package - Minimal Design */}
+        <div className="mb-28 text-center max-w-3xl mx-auto">
+          <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Full Transformation Program
+          </h3>
+          <p className="text-muted-foreground leading-relaxed text-lg mb-10">
+            Experience the complete transformation process with all four workshops combined. 
+            A structured, step-by-step journey from inner healing to building confident, healthy relationships.
+          </p>
+          
+          <div className="flex items-center justify-center gap-4 mb-10">
+            <span className="text-muted-foreground line-through text-xl">116 €</span>
+            <span className="font-serif text-4xl md:text-5xl font-bold text-primary">99 €</span>
           </div>
+          
+          <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+            {["All 4 workshops", "Structured journey", "Save 17 €"].map((item, i) => (
+              <span key={i} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                {item}
+              </span>
+            ))}
+          </div>
+          
+          <Link href="/contact">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-10 py-6 text-base font-medium">
+              Get Started
+            </Button>
+          </Link>
         </div>
 
         {/* 1:1 Coaching - Minimal Design */}
