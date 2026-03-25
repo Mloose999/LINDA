@@ -14,11 +14,11 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Image with decorative elements */}
           <div className="relative">
-            {/* Decorative beige box - offset shadow effect */}
-            <div className="absolute top-4 -right-4 bottom-4 w-full rounded-3xl bg-beige z-0" />
-            {/* Decorative beige circle - bottom left */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-beige z-0" />
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden w-full relative z-10">
+            {/* Decorative beige box - large offset to bottom right */}
+            <div className="absolute top-8 left-8 w-full h-full bg-beige z-0" />
+            {/* Decorative beige circle - top left */}
+            <div className="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-beige z-0" />
+            <div className="aspect-[4/5] overflow-hidden w-full relative z-10">
               <Image
                 src="/images/coach.jpg"
                 alt="Linda Holtkamp - Mindset Coach"
