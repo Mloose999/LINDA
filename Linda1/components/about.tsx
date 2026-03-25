@@ -14,10 +14,10 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Image with decorative elements */}
           <div className="relative">
-            {/* Decorative beige circle - top right */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-beige z-0" />
+            {/* Decorative beige box - offset shadow effect */}
+            <div className="absolute top-4 -right-4 bottom-4 w-full rounded-3xl bg-beige z-0" />
             {/* Decorative beige circle - bottom left */}
-            <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-beige z-0" />
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-beige z-0" />
             <div className="aspect-[4/5] rounded-3xl overflow-hidden w-full relative z-10">
               <Image
                 src="/images/coach.jpg"

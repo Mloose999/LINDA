@@ -61,9 +61,10 @@ export function Workshops() {
 
         {/* Hero Image with Overlay Text */}
         <div className="relative mb-24">
-          {/* Decorative beige elements */}
-          <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full bg-beige z-0" />
-          <div className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full bg-beige z-0" />
+          {/* Decorative beige box - offset shadow on right */}
+          <div className="absolute top-6 -right-4 bottom-6 w-[calc(100%-2rem)] rounded-3xl bg-beige z-0" />
+          {/* Decorative beige circle - top left */}
+          <div className="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-beige z-0" />
           <div className="relative rounded-3xl overflow-hidden aspect-[21/9] z-10">
             <Image
               src="/images/workshop.jpg"
@@ -94,8 +95,10 @@ export function Workshops() {
               </p>
             </div>
             <div className="lg:w-1/2 relative">
-              {/* Decorative beige element */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-beige z-0" />
+              {/* Decorative beige box - offset bottom left */}
+              <div className="absolute top-4 -left-4 w-full h-full rounded-2xl bg-beige z-0" />
+              {/* Decorative beige circle - top right */}
+              <div className="absolute -top-5 -right-5 w-16 h-16 rounded-full bg-beige z-0" />
               <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden relative z-10">
                 <Image
                   src="/images/book.jpg"
