@@ -154,7 +154,7 @@ export function Workshops() {
 
         {/* Complete Program Package - Highlighted Design */}
         <div className="mb-28 relative">
-          <div className="bg-card border-2 border-accent/30 rounded-3xl p-10 md:p-14 text-center">
+          <div className="rounded-3xl p-10 md:p-14 text-center">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               Full Transformation Program
