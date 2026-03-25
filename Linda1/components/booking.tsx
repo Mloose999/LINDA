@@ -3,33 +3,35 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
 
 export function Booking() {
   return (
     <section id="booking" className="py-24 md:py-32 bg-background">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="relative">
-          {/* Book Image */}
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
-            <Image
-              src="/images/book.jpg"
-              alt="Book a coaching session"
-              fill
-              className="object-cover rounded-2xl"
-            />
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
+          {/* Image with decorative beige box */}
+          <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0">
+            {/* Decorative beige box - offset behind the image */}
+            <div className="absolute -top-4 -left-4 w-full h-full bg-beige z-0" />
+            <div className="relative aspect-square w-full z-10">
+              <Image
+                src="/images/book.jpg"
+                alt="Book a coaching session"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover"
+              />
+            </div>
           </div>
           
-          {/* Text Box overlapping the image */}
-          <div className="relative md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/3 w-full md:w-[80%] lg:w-[70%] mt-[-3rem] md:mt-0">
-            <div className="bg-[#f5f5f3] rounded-2xl p-8 md:p-12 text-center shadow-lg">
-              <Calendar className="w-12 h-12 text-accent mx-auto mb-6" strokeWidth={1.5} />
-              
+          {/* Text Box - slightly overlapping the image on desktop */}
+          <div className="relative w-full lg:w-1/2 lg:-ml-12 z-20">
+            <div className="bg-[#f5f5f3] p-8 md:p-12 text-center lg:text-left shadow-lg">
               <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
                 Book a Session
               </h2>
               
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-8">
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
                 Start your transformation today. Book a 1:1 coaching session and take the first step 
                 toward a life of clarity, strength, and purpose.
               </p>
