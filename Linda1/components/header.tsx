@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -40,60 +39,40 @@ export function Header() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-card/95 backdrop-blur-md shadow-sm py-3" 
-          : "bg-transparent py-4"
+          ? "bg-background/95 backdrop-blur-md shadow-sm py-4" 
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link 
           href="/" 
           className="flex items-center gap-3"
         >
-          <Image
-            src="/images/logo.png"
-            alt="Change Your Life with Linda"
-            width={80}
-            height={80}
-            className="object-contain"
-          />
-          <span className={`font-serif text-lg font-bold transition-colors hidden sm:block ${
-            isScrolled ? "text-foreground" : "text-card"
+          <span className={`font-serif text-xl font-medium italic transition-colors ${
+            isScrolled ? "text-foreground" : "text-foreground"
           }`}>
-            Linda Holtkamp - Mindset Coaching
+            logo
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className={`text-sm font-medium transition-colors hover:opacity-80 ${
-                isScrolled ? "text-foreground" : "text-card"
-              }`}
+              className="text-sm tracking-wide text-foreground/80 hover:text-foreground transition-colors"
             >
               {link.name}
             </Link>
           ))}
-          <Button 
-            size="sm"
-            className={`px-6 transition-all ${
-              isScrolled 
-                ? "bg-primary text-primary-foreground hover:bg-primary/90" 
-                : "bg-card text-foreground hover:bg-card/90"
-            }`}
-            onClick={() => router.push("/contact")}
-          >
-            Book Now
-          </Button>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Menu Button */}
         <button
-          className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-card"}`}
+          className="p-2 text-foreground"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -103,7 +82,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-card border-b border-border shadow-lg">
+        <div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
           <nav className="flex flex-col p-6 gap-4">
             {navLinks.map((link) => (
               <Link
@@ -116,7 +95,8 @@ export function Header() {
               </Link>
             ))}
             <Button 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
+              variant="outline"
+              className="border-foreground text-foreground hover:bg-foreground hover:text-background mt-2"
               onClick={() => {
                 router.push("/contact")
                 setIsMobileMenuOpen(false)

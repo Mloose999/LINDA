@@ -6,49 +6,49 @@ import { Button } from "@/components/ui/button"
 
 export function Booking() {
   return (
-    <section id="booking" className="py-24 md:py-32 bg-background">
+    <section id="booking" className="py-24 md:py-32 bg-beige-light">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-          {/* Image with decorative beige box */}
-          <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
-            {/* Decorative beige box - offset behind the image */}
-            <div className="absolute -top-10 -left-10 w-[calc(100%+20px)] h-[calc(100%+20px)] bg-beige z-0" />
-            <div className="relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image with decorative elements */}
+          <div className="relative">
+            {/* Beige background box */}
+            <div className="absolute -top-6 -left-6 w-full h-full bg-beige z-0" />
+            
+            <div className="relative z-10 aspect-square overflow-hidden">
               <Image
                 src="/images/book.jpg"
                 alt="Book a coaching session"
-                width={400}
-                height={400}
-                className="object-cover w-full h-auto"
+                fill
+                className="object-cover"
               />
             </div>
+            
+            {/* Decorative circle */}
+            <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-card z-0" />
           </div>
           
-          {/* Text Box - slightly overlapping the image on desktop */}
-          <div className="relative w-full lg:w-1/2 lg:-ml-12 z-20">
-            <div className="bg-[#f5f5f3] p-8 md:p-12 text-center lg:text-left shadow-lg">
-              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold text-foreground mb-4">
-                Book a Session
-              </h2>
-              
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
-                Start your transformation today. Book a 1:1 coaching session and take the first step 
-                toward a life of clarity, strength, and purpose.
-              </p>
-              
-              <Link href="/contact">
-                <Button 
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Book Now
-                </Button>
-              </Link>
-
-              <p className="mt-8 text-muted-foreground text-sm">
-                Fill out the contact form and Linda will get back to you to schedule your session.
-              </p>
-            </div>
+          {/* Text Content */}
+          <div className="lg:pl-8">
+            <p className="text-muted-foreground tracking-[0.3em] uppercase text-sm mb-4">Get Started</p>
+            
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Book a Session
+            </h2>
+            
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Start your transformation today. Book a 1:1 coaching session and take the first step 
+              toward a life of clarity, strength, and purpose. Fill out the contact form and Linda 
+              will get back to you to schedule your session.
+            </p>
+            
+            <Link href="/contact">
+              <Button 
+                variant="outline"
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background px-10 py-6 text-sm tracking-widest uppercase transition-all duration-300"
+              >
+                Book Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

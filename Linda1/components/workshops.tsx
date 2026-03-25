@@ -1,6 +1,4 @@
-import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { Brain, Flame, Sparkles, Heart, Users, Check, ArrowRight } from "lucide-react"
 
 const workshops = [
@@ -50,8 +48,8 @@ export function Workshops() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Transformation Journey</p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-6 text-balance">
+          <p className="text-muted-foreground tracking-[0.3em] uppercase text-sm mb-4">Transformation Journey</p>
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
             Workshops & Programs
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
@@ -59,12 +57,11 @@ export function Workshops() {
           </p>
         </div>
 
-        {/* Hero Image with Overlay Text */}
+        {/* Hero Image with Overlay */}
         <div className="relative mb-24">
-          {/* Decorative beige box - offset to bottom */}
+          {/* Beige background box */}
           <div className="absolute top-6 left-6 w-full h-full bg-beige z-0" />
-          {/* Decorative beige circle - bottom right, medium */}
-          <div className="absolute -bottom-8 -right-8 w-28 h-28 rounded-full bg-beige z-0" />
+          
           <div className="relative overflow-hidden aspect-[21/9] z-10">
             <Image
               src="/images/workshop.jpg"
@@ -72,7 +69,7 @@ export function Workshops() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-foreground/60 via-foreground/30 to-transparent" />
             <div className="absolute inset-0 flex items-center">
               <div className="px-8 md:px-12 max-w-xl">
                 <p className="text-card font-serif text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
@@ -90,16 +87,14 @@ export function Workshops() {
               How Each Workshop Works
             </h3>
             <p className="text-muted-foreground leading-relaxed text-lg max-w-2xl mx-auto">
-              Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change. You will learn, practice, and integrate at your own pace.
+              Each workshop is carefully designed with a proven structure that guides you from understanding to lasting change.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12 md:gap-6 relative">
-            {/* Connecting line for desktop */}
-            <div className="hidden md:block absolute top-6 left-[16%] right-[16%] h-px bg-accent/30" />
-            
+          
+          <div className="grid md:grid-cols-3 gap-12 md:gap-8">
             {workshopStructure.map((item, index) => (
               <div key={index} className="relative text-center group">
-                <div className="relative z-10 w-12 h-12 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-serif font-bold text-sm mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-beige text-foreground flex items-center justify-center font-serif font-bold text-lg mx-auto mb-6 group-hover:bg-foreground group-hover:text-background transition-colors duration-300">
                   {item.step}
                 </div>
                 <h4 className="font-serif text-xl font-bold text-foreground mb-3">
@@ -113,7 +108,7 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Individual Workshops - Clean List Style */}
+        {/* Individual Workshops */}
         <div className="mb-28">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
@@ -122,36 +117,36 @@ export function Workshops() {
               </h3>
               <p className="text-muted-foreground mt-2">Choose the topics that resonate with you most</p>
             </div>
-            <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
+            <p className="font-serif text-2xl font-bold text-foreground">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-4">
             {workshops.map((workshop, index) => (
               <div 
                 key={index} 
-                className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
+                className="group flex items-start gap-6 p-6 bg-card hover:bg-beige-light transition-colors duration-300"
               >
-                <div className="flex-shrink-0 pt-1">
-                  <workshop.icon className="w-7 h-7 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                <div className="flex-shrink-0 w-12 h-12 bg-beige flex items-center justify-center">
+                  <workshop.icon className="w-6 h-6 text-foreground" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-foreground transition-colors duration-300">
                     {workshop.title}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
                     {workshop.description}
                   </p>
                 </div>
-                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300 mt-1" />
+                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300 mt-3" />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Complete Program Package - Highlighted Design */}
-        <div className="mb-28 relative">
-          <div className="rounded-3xl p-10 md:p-14 text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
+        {/* Complete Program Package */}
+        <div className="mb-28">
+          <div className="bg-beige p-10 md:p-14 text-center">
+            <p className="text-foreground/60 tracking-[0.3em] uppercase text-sm mb-4">Complete Package</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               Full Transformation Program
             </h3>
@@ -162,26 +157,24 @@ export function Workshops() {
             
             <div className="flex items-center justify-center gap-4 mb-10">
               <span className="text-muted-foreground/60 line-through text-xl">116 €</span>
-              <span className="font-serif text-5xl md:text-6xl font-bold text-accent">99 €</span>
+              <span className="font-serif text-5xl md:text-6xl font-bold text-foreground">99 €</span>
             </div>
             
-            <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
+            <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
               {["All 4 workshops", "Structured journey", "Save 17 €"].map((item, i) => (
                 <span key={i} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent" />
+                  <Check className="w-4 h-4 text-foreground" />
                   {item}
                 </span>
               ))}
             </div>
-            
-            
           </div>
         </div>
 
-        {/* 1:1 Coaching - Minimal Design */}
+        {/* 1:1 Coaching */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-8">
-            <Users className="w-8 h-8 text-accent" strokeWidth={1.5} />
+          <div className="w-16 h-16 bg-beige flex items-center justify-center mx-auto mb-8">
+            <Users className="w-8 h-8 text-foreground" strokeWidth={1.5} />
           </div>
           <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
             1:1 Coaching
@@ -190,14 +183,13 @@ export function Workshops() {
             For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
             Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
+          <div className="flex flex-wrap justify-center gap-3">
             {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
-              <span key={i} className="text-sm text-foreground bg-accent/20 px-5 py-2">
+              <span key={i} className="text-sm text-foreground bg-beige-light px-5 py-2">
                 {format}
               </span>
             ))}
           </div>
-          
         </div>
       </div>
     </section>

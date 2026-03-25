@@ -18,11 +18,13 @@ export function Newsletter() {
   }
 
   return (
-    <section id="newsletter" className="py-24 md:py-32 bg-background">
+    <section id="newsletter" className="py-24 md:py-32 bg-beige">
       <div className="max-w-2xl mx-auto px-6 text-center">
-        <Mail className="w-14 h-14 text-accent mx-auto mb-8" strokeWidth={1.5} />
+        <div className="w-16 h-16 bg-card flex items-center justify-center mx-auto mb-8">
+          <Mail className="w-8 h-8 text-foreground" strokeWidth={1.5} />
+        </div>
         
-        <h2 className="font-serif text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
           Stay Connected
         </h2>
         
@@ -32,8 +34,8 @@ export function Newsletter() {
         </p>
 
         {isSubmitted ? (
-          <div className="bg-accent/20 py-4 px-8 inline-block">
-            <p className="text-accent font-medium">
+          <div className="bg-card py-4 px-8 inline-block">
+            <p className="text-foreground font-medium">
               Thank you for subscribing! Check your inbox for a confirmation.
             </p>
           </div>
@@ -45,11 +47,12 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 h-12 px-6 bg-muted border-0 focus:ring-2 focus:ring-primary"
+              className="flex-1 h-12 px-6 bg-card border-0 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-foreground"
             />
             <Button 
               type="submit"
-              className="h-12 px-8 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+              variant="outline"
+              className="h-12 px-8 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
             >
               Subscribe
             </Button>

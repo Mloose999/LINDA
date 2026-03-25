@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   const scrollToPhilosophy = () => {
@@ -9,44 +9,59 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-secondary/70" />
-      </div>
+    <section className="relative min-h-screen bg-background overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-20 w-32 h-32 rounded-full bg-beige/50 hidden lg:block" />
+      <div className="absolute bottom-40 right-40 w-20 h-20 rounded-full bg-beige hidden lg:block" />
+      
+      <div className="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Image Side */}
+          <div className="relative order-1 lg:order-1">
+            {/* Beige background box - offset */}
+            <div className="absolute -top-6 -left-6 w-full h-full bg-beige z-0" />
+            
+            <div className="relative z-10 aspect-[4/5] overflow-hidden">
+              <Image
+                src="/images/coach.jpg"
+                alt="Linda Holtkamp - Life Coach"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+            
+            {/* Small decorative circle */}
+            <div className="absolute -bottom-8 -right-8 w-24 h-24 rounded-full bg-beige-light z-0" />
+          </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-accent font-semibold text-lg md:text-xl tracking-widest uppercase mb-4">Change Your Life with Linda</p>
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-extrabold text-card leading-tight text-balance mb-6">
-          Giving up is not an option
-        </h1>
-        <p className="text-accent/90 italic text-lg mb-8">It starts with you</p>
-        <p className="text-card/90 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-10 text-pretty">
-          Mental strength is the foundation of a fulfilled life. Your thoughts shape your reality, 
-          and when you learn to master your mind, you unlock the power to overcome challenges, 
-          grow beyond limitations, and create the life you truly desire.
-        </p>
-        <Button 
-          size="lg"
-          onClick={scrollToPhilosophy}
-          className="bg-card text-foreground hover:bg-card/90 px-8 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
-        >
-          Start Your Journey
-        </Button>
-      </div>
+          {/* Content Side */}
+          <div className="order-2 lg:order-2 text-center lg:text-left">
+            <p className="text-muted-foreground tracking-[0.3em] uppercase text-sm mb-6">Life Coaching</p>
+            
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+              WHAT IS A<br />
+              <span className="text-foreground">LIFE COACH?</span>
+            </h1>
+            
+            <p className="text-muted-foreground tracking-[0.2em] uppercase text-sm mb-4">
+              We help you cultivate creativity
+            </p>
+            
+            <p className="text-muted-foreground/60 text-sm italic mb-8">
+              Change Your Life with Linda
+            </p>
 
-      {/* Scroll Indicator */}
-      <button 
-        onClick={scrollToPhilosophy}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-card/80 animate-bounce cursor-pointer"
-        aria-label="Scroll down"
-      >
-        <ArrowDown className="w-6 h-6" />
-      </button>
+            <Button 
+              onClick={scrollToPhilosophy}
+              variant="outline"
+              className="border-foreground text-foreground hover:bg-foreground hover:text-background px-8 py-6 text-sm tracking-widest uppercase transition-all duration-300"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
