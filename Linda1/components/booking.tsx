@@ -12,7 +12,7 @@ export function Booking() {
           {/* Image with decorative beige box */}
           <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
             {/* Decorative beige box - offset behind the image */}
-            <div className="absolute -top-10 -left-10 w-[calc(100%+20px)] h-[calc(100%+20px)] bg-beige z-0" />
+            <div className="absolute -top-10 -left-10 w-[calc(100%+20px)] h-[calc(100%+20px)] bg-beige-dark z-0" />
             <div className="relative z-10">
               <Image
                 src="/images/book.jpg"

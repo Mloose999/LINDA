@@ -19,6 +19,7 @@
   /* Beige Töne - warm und einladend */
   --beige: oklch(0.96 0.015 80);
   --beige-light: oklch(0.80 0.04 70);
+  --beige-dark: oklch(0.75 0.05 70);
   
   /* Smaragdgrün - satt und elegant */
   --primary: oklch(0.42 0.12 160);
@@ -140,6 +141,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
   --color-beige: var(--beige);
   --color-beige-light: var(--beige-light);
+  --color-beige-dark: var(--beige-dark);
 }
 
 @layer base {

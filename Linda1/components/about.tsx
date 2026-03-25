@@ -15,9 +15,9 @@ export function About() {
           {/* Image with decorative elements */}
           <div className="relative">
             {/* Decorative beige box - large offset to bottom right */}
-            <div className="absolute top-8 left-8 w-full h-full bg-beige z-0" />
+            <div className="absolute top-8 left-8 w-full h-full bg-beige-dark z-0" />
             {/* Decorative beige circle - top left */}
-            <div className="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-beige z-0" />
+            <div className="absolute -top-10 -left-10 w-36 h-36 rounded-full bg-beige-dark z-0" />
             <div className="aspect-[4/5] overflow-hidden w-full relative z-10">
               <Image
                 src="/images/coach.jpg"

@@ -28,9 +28,9 @@ export function Philosophy() {
         {/* Featured Image with Quote */}
         <div className="relative mb-20">
           {/* Decorative beige box - large offset to top left */}
-          <div className="absolute -top-6 -left-6 w-2/3 h-2/3 bg-beige z-0" />
+          <div className="absolute -top-6 -left-6 w-2/3 h-2/3 bg-beige-dark z-0" />
           {/* Decorative beige circle - bottom right, large */}
-          <div className="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-beige z-0" />
+          <div className="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-beige-dark z-0" />
           <div className="relative overflow-hidden aspect-square md:aspect-[4/3] z-10">
             <Image
               src="/images/hourglass.jpg"
