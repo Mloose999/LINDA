@@ -205,10 +205,9 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* 1:1 Coaching - Modern Card Design */}
-        <div className="grid md:grid-cols-2 gap-0">
-          {/* Content Side */}
-          <div className="bg-[#f5f5f3] p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+        {/* 1:1 Coaching - Clean Card Design */}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-[#f5f5f3] p-8 md:p-12 lg:p-16">
             <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Personal Support</p>
             <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               1:1 Coaching
@@ -218,32 +217,24 @@ export function Workshops() {
               Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
             </p>
             
-            <div className="space-y-4 mb-8">
+            <div className="space-y-4">
               <p className="text-foreground font-medium">Available formats:</p>
-              <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {[
                   { format: "Live Sessions", desc: "In-person or video call" },
                   { format: "Email Coaching", desc: "Written guidance at your pace" },
                   { format: "Phone / WhatsApp", desc: "Quick support when you need it" }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent" />
-                    <span className="text-foreground">{item.format}</span>
-                    <span className="text-muted-foreground text-sm">— {item.desc}</span>
+                  <div key={i} className="flex flex-col gap-1">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-accent" />
+                      <span className="text-foreground font-medium">{item.format}</span>
+                    </div>
+                    <span className="text-muted-foreground text-sm pl-4">{item.desc}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-          {/* Image Side */}
-          <div className="relative aspect-square md:aspect-auto min-h-[300px] order-1 md:order-2">
-            <Image
-              src="/images/coaching-1on1.jpg"
-              alt="Personal 1:1 coaching session"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
           </div>
         </div>
       </div>
