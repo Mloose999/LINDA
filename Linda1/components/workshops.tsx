@@ -164,56 +164,87 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Complete Program Package - Highlighted Design */}
-        <div className="mb-28 relative">
-          <div className="rounded-3xl p-10 md:p-14 text-center">
-            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
-            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Full Transformation Program
-            </h3>
-            <p className="text-muted-foreground leading-relaxed text-lg mb-10 max-w-2xl mx-auto">
-              Experience the complete transformation process with all four workshops combined. 
-              A structured, step-by-step journey from inner healing to building confident, healthy relationships.
-            </p>
-            
-            <div className="flex items-center justify-center gap-4 mb-10">
-              <span className="text-muted-foreground/60 line-through text-xl">116 €</span>
-              <span className="font-serif text-5xl md:text-6xl font-bold text-accent">99 €</span>
+        {/* Complete Program Package - Modern Split Design */}
+        <div className="mb-28">
+          <div className="grid md:grid-cols-2 gap-0">
+            {/* Image Side */}
+            <div className="relative aspect-square md:aspect-auto">
+              <Image
+                src="/images/complete-package.jpg"
+                alt="Complete transformation program"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
             </div>
-            
-            <div className="flex flex-wrap justify-center gap-6 mb-12 text-muted-foreground">
-              {["All 4 workshops", "Structured journey", "Save 17 €"].map((item, i) => (
-                <span key={i} className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent" />
-                  {item}
-                </span>
-              ))}
+            {/* Content Side */}
+            <div className="bg-secondary p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+              <p className="text-card/70 font-semibold tracking-widest uppercase text-sm mb-4">Complete Package</p>
+              <h3 className="font-serif text-3xl md:text-4xl font-bold text-card mb-6">
+                Full Transformation Program
+              </h3>
+              <p className="text-card/80 leading-relaxed mb-8">
+                Experience the complete transformation process with all four workshops combined. 
+                A structured, step-by-step journey from inner healing to building confident, healthy relationships.
+              </p>
+              
+              <div className="flex items-baseline gap-3 mb-8">
+                <span className="text-card/50 line-through text-lg">116 €</span>
+                <span className="font-serif text-5xl font-bold text-card">99 €</span>
+              </div>
+              
+              <div className="space-y-3">
+                {["All 4 workshops included", "Structured transformation journey", "Save 17 € with the bundle"].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-card/90">
+                    <Check className="w-5 h-5 text-accent" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            
-            
           </div>
         </div>
 
-        {/* 1:1 Coaching - Minimal Design */}
-        <div className="text-center max-w-3xl mx-auto">
-          <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-8">
-            <Users className="w-8 h-8 text-accent" strokeWidth={1.5} />
+        {/* 1:1 Coaching - Modern Card Design */}
+        <div className="grid md:grid-cols-2 gap-0">
+          {/* Content Side */}
+          <div className="bg-[#f5f5f3] p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">Personal Support</p>
+            <h3 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+              1:1 Coaching
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
+              Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
+            </p>
+            
+            <div className="space-y-4 mb-8">
+              <p className="text-foreground font-medium">Available formats:</p>
+              <div className="grid grid-cols-1 gap-3">
+                {[
+                  { format: "Live Sessions", desc: "In-person or video call" },
+                  { format: "Email Coaching", desc: "Written guidance at your pace" },
+                  { format: "Phone / WhatsApp", desc: "Quick support when you need it" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-accent" />
+                    <span className="text-foreground">{item.format}</span>
+                    <span className="text-muted-foreground text-sm">— {item.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-            1:1 Coaching
-          </h3>
-          <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            For personalized guidance in urgent or complex situations, I offer individual coaching sessions. 
-            Work directly on your specific blockages, fears, or emotional patterns in a safe, private space.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {["Live Sessions", "Email Coaching", "Phone / WhatsApp"].map((format, i) => (
-              <span key={i} className="text-sm text-foreground bg-accent/20 px-5 py-2">
-                {format}
-              </span>
-            ))}
+          {/* Image Side */}
+          <div className="relative aspect-square md:aspect-auto min-h-[300px] order-1 md:order-2">
+            <Image
+              src="/images/coaching-1on1.jpg"
+              alt="Personal 1:1 coaching session"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
           </div>
-          
         </div>
       </div>
     </section>
