@@ -25,6 +25,7 @@ export function About() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-secondary/40" />
             </div>
           </div>
 

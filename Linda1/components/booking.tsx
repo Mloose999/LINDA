@@ -21,6 +21,7 @@ export function Booking() {
                 height={400}
                 className="object-cover w-full h-auto"
               />
+              <div className="absolute inset-0 bg-secondary/40" />
             </div>
           </div>
           
