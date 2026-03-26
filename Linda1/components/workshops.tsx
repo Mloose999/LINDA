@@ -65,11 +65,7 @@ export function Workshops() {
 
         {/* Hero Image with Overlay Text */}
         <div className="relative mb-24">
-          {/* Decorative beige box - offset to bottom */}
-          <div className="absolute top-6 left-6 w-full h-full bg-beige z-0" />
-          {/* Decorative beige circle - bottom right, medium */}
-          <div className="absolute -bottom-8 -right-8 w-28 h-28 rounded-full bg-beige z-0" />
-          <div className="relative overflow-hidden aspect-[21/9] z-10">
+          <div className="relative overflow-hidden aspect-[21/9]">
             <Image
               src="/images/workshop.jpg"
               alt="Personal transformation workshop"
