@@ -133,35 +133,25 @@ export function Workshops() {
             {workshops.map((workshop, index) => (
               <div 
                 key={index} 
-                className="group relative overflow-hidden rounded-2xl bg-card"
+                className="group relative overflow-hidden rounded-2xl"
               >
-                {/* Image Section */}
-                <div className="relative aspect-[16/10] overflow-hidden">
+                {/* Image Section with text overlay */}
+                <div className="relative aspect-[16/12] overflow-hidden">
                   <Image
                     src={workshop.image}
                     alt={workshop.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
-                  {/* Icon overlay */}
-                  <div className="absolute bottom-4 left-4">
-                    <div className="w-12 h-12 rounded-full bg-card/90 flex items-center justify-center">
-                      <workshop.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
-                    </div>
-                  </div>
-                </div>
-                {/* Content Section */}
-                <div className="p-6">
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
-                    {workshop.title}
-                  </h4>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {workshop.description}
-                  </p>
-                  <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/50 to-transparent" />
+                  {/* Content overlaid on image */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h4 className="font-serif text-lg md:text-xl font-bold text-card mb-2">
+                      {workshop.title}
+                    </h4>
+                    <p className="text-card/80 leading-relaxed text-sm">
+                      {workshop.description}
+                    </p>
                   </div>
                 </div>
               </div>
