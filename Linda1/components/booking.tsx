@@ -9,11 +9,9 @@ export function Booking() {
     <section id="booking" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-          {/* Image with decorative beige box */}
+          {/* Image */}
           <div className="relative w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 flex-shrink-0">
-            {/* Decorative beige box - offset behind the image */}
-            <div className="absolute -top-10 -left-10 w-[calc(100%+20px)] h-[calc(100%+20px)] bg-beige z-0" />
-            <div className="relative z-10">
+            <div className="relative">
               <Image
                 src="/images/book.jpg"
                 alt="Book a coaching session"
