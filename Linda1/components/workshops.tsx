@@ -129,33 +129,38 @@ export function Workshops() {
             <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {workshops.map((workshop, index) => (
-              <div 
-                key={index} 
-                className="group relative overflow-hidden rounded-2xl"
-              >
-                {/* Image Section with text overlay */}
-                <div className="relative aspect-[16/12] overflow-hidden">
-                  <Image
-                    src={workshop.image}
-                    alt={workshop.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/95 via-secondary/50 to-transparent" />
-                  {/* Content overlaid on image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h4 className="font-serif text-lg md:text-xl font-bold text-card mb-2">
-                      {workshop.title}
-                    </h4>
-                    <p className="text-card/80 leading-relaxed text-sm">
-                      {workshop.description}
-                    </p>
+          <div className="grid md:grid-cols-2 gap-12">
+            {workshops.map((workshop, index) => {
+              const isEven = index % 2 === 0
+              return (
+                <div 
+                  key={index} 
+                  className="group relative"
+                >
+                  {/* Image */}
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={workshop.image}
+                      alt={workshop.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
+                  </div>
+                  {/* White text box - alternating positions */}
+                  <div className={`relative z-20 -mt-16 ${isEven ? 'mr-8 ml-0' : 'ml-8 mr-0'}`}>
+                    <div className="bg-[#f5f5f3] p-6 shadow-lg">
+                      <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2">
+                        {workshop.title}
+                      </h4>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {workshop.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
