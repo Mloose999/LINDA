@@ -7,22 +7,26 @@ const workshops = [
   {
     icon: Brain,
     title: "Understanding Yourself & Regulating Your Nervous System",
-    description: "Learn to understand your inner world and develop tools to regulate your nervous system for greater calm and clarity."
+    description: "Learn to understand your inner world and develop tools to regulate your nervous system for greater calm and clarity.",
+    image: "/images/workshop-nervous.jpg"
   },
   {
     icon: Flame,
     title: "Transforming Fears & Limiting Beliefs",
-    description: "Identify and release the fears and beliefs that have been holding you back from living your fullest life."
+    description: "Identify and release the fears and beliefs that have been holding you back from living your fullest life.",
+    image: "/images/workshop-fears.jpg"
   },
   {
     icon: Sparkles,
     title: "Creating a New Life from a New Energy",
-    description: "Step into a new vibration and learn to create your reality from a place of empowerment and possibility."
+    description: "Step into a new vibration and learn to create your reality from a place of empowerment and possibility.",
+    image: "/images/workshop-energy.jpg"
   },
   {
     icon: Heart,
     title: "From Insecurity to a Healthy Relationship",
-    description: "Build confidence and learn the foundations of creating and maintaining healthy, fulfilling relationships."
+    description: "Build confidence and learn the foundations of creating and maintaining healthy, fulfilling relationships.",
+    image: "/images/workshop-relationship.jpg"
   }
 ]
 
@@ -113,7 +117,7 @@ export function Workshops() {
           </div>
         </div>
 
-        {/* Individual Workshops - Clean List Style */}
+        {/* Individual Workshops - Card Style with Images */}
         <div className="mb-28">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
             <div>
@@ -125,24 +129,41 @@ export function Workshops() {
             <p className="text-accent font-serif text-2xl font-bold">29 € <span className="text-base font-normal text-muted-foreground">per workshop</span></p>
           </div>
           
-          <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {workshops.map((workshop, index) => (
               <div 
                 key={index} 
-                className="group flex items-start gap-6 p-6 rounded-2xl hover:bg-card transition-colors duration-300"
+                className="group relative overflow-hidden rounded-2xl bg-card"
               >
-                <div className="flex-shrink-0 pt-1">
-                  <workshop.icon className="w-7 h-7 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+                {/* Image Section */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={workshop.image}
+                    alt={workshop.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
+                  {/* Icon overlay */}
+                  <div className="absolute bottom-4 left-4">
+                    <div className="w-12 h-12 rounded-full bg-card/90 flex items-center justify-center">
+                      <workshop.icon className="w-6 h-6 text-accent" strokeWidth={1.5} />
+                    </div>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+                {/* Content Section */}
+                <div className="p-6">
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
                     {workshop.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
                     {workshop.description}
                   </p>
+                  <div className="mt-4 flex items-center gap-2 text-accent font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span>Learn more</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
                 </div>
-                <ArrowRight className="hidden md:block w-5 h-5 text-muted-foreground/30 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300 mt-1" />
               </div>
             ))}
           </div>
